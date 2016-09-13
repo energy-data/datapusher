@@ -26,7 +26,7 @@ PORT = 8800
 #LOG_FILE = '/tmp/ckan_service.log'
 STDERR = True
 
-TYPES = [messytables.StringType, messytables.DecimalType, messytables.IntegerType, messytables.DateType, messytables.BoolType]
+TYPES = [messytables.StringType, messytables.DecimalType, messytables.IntegerType, messytables.BoolType]
 TYPE_MAPPING = {
     'String': 'text',
     # 'int' may not be big enough,
