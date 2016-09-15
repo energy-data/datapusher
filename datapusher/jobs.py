@@ -37,11 +37,11 @@ _TYPE_MAPPING = {
     'Decimal': 'numeric',
     # Temporarily mapping dates to text.
     # https://github.com/energy-data/energydata.info/issues/1
-    'DateUtil': 'text'
+    # 'DateUtil': 'text'
 }
 
 _TYPES = [messytables.StringType, messytables.DecimalType,
-          messytables.IntegerType, messytables.DateUtilType]
+          messytables.IntegerType]
 
 TYPE_MAPPING = web.app.config.get('TYPE_MAPPING', _TYPE_MAPPING)
 TYPES = web.app.config.get('TYPES', _TYPES)
