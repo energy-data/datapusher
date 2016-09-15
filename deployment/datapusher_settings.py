@@ -25,17 +25,3 @@ PORT = 8800
 
 #LOG_FILE = '/tmp/ckan_service.log'
 STDERR = True
-
-TYPES = [messytables.StringType, messytables.DecimalType, messytables.IntegerType, messytables.BoolType]
-TYPE_MAPPING = {
-    'String': 'text',
-    # 'int' may not be big enough,
-    # and type detection may not realize it needs to be big
-    'Integer': 'numeric',
-    'Decimal': 'numeric',
-    # Date guessing is very aggressive, with '00:10' being transformed in a
-    # timestamp with date.now().
-    # Disabling for now.
-    # 'Date': 'timestamp',
-    'Bool': 'boolean'
-}

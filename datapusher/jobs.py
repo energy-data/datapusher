@@ -35,7 +35,9 @@ _TYPE_MAPPING = {
     # and type detection may not realize it needs to be big
     'Integer': 'numeric',
     'Decimal': 'numeric',
-    'DateUtil': 'timestamp'
+    # Temporarily mapping dates to text.
+    # https://github.com/energy-data/energydata.info/issues/1
+    'DateUtil': 'text'
 }
 
 _TYPES = [messytables.StringType, messytables.DecimalType,
