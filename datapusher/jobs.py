@@ -97,6 +97,11 @@ class HTTPError(util.JobError):
             "Response": response,
         }
 
+    def __str__(self):
+        return u'{} status={} url={} response={}'.format(
+            self.message, self.status_code, self.request_url, self.response) \
+            .encode('ascii', 'replace')
+
 
 def get_url(action, ckan_url):
     """
